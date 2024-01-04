@@ -28,3 +28,6 @@ This section discusses the enhancement of the algorithm with a deep neural netwo
 - **Hyper-Parameter Sensitivity:** Numerous parameters (alpha, k, learning rate, num epoch, lambda) require careful tuning to avoid sub-optimal solutions.
 - **Vulnerability to Adversarial Attacks:** The deep neural network's sensitivity to data changes makes it prone to such attacks. Regularizing gradients and introducing randomness in training can help mitigate this.
 
+### Comaprison figure with model and updated model
+! [https://github.com/rethegreat/Correctness-Predictor/blob/main/src/img/model_comparison.png]
+
