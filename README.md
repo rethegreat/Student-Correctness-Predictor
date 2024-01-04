@@ -12,10 +12,10 @@ A series of different machine learning model attempting to model if a student ca
 
 - **Ensemble Techniques:** Ensemble process, dataset creation, IRT model training, and performance evaluation.
 
-- **Extensions and Modifications:** Improvements using deep neural networks, Leaky ReLU activation, and Adam optimizer. Discusses limitations like sample size and hyperparameter sensitivity.
+- **Extensions and Modifications of the Neural Network:** Improvements using deep neural networks, Leaky ReLU activation, and Adam optimizer. Discusses limitations like sample size and hyperparameter sensitivity.
 
 
-## Extensions and Modifications
+## Extensions and Modifications of the neural network
 This section discusses the enhancement of the algorithm with a deep neural network, addressing potential underfitting in earlier models. Key points include:
 - **Deep Neural Network Implementation:** To better capture complex data relationships, hidden layers are added with Leaky ReLU activation functions.
 - **Adaptive Moment Estimation (Adam) Optimizer:** Used for a robust approach with an adaptive learning rate and momentum, aiding in handling noisy gradients.
