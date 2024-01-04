@@ -73,18 +73,11 @@ class AutoEncoder(nn.Module):
         :param inputs: user vector.
         :return: user vector.
         """
-        #####################################################################
-        # Implement the function as described in the docstring. #
-        # Use sigmoid activations for f and g. #
-        #####################################################################
         g = self.g(inputs)
 
         h = self.h(torch.reciprocal(1 + torch.exp(g)))
         out = torch.reciprocal(1 + torch.exp(h))
 
-        #####################################################################
-        # END OF YOUR CODE #
-        #####################################################################
         return out
 
 
@@ -143,9 +136,7 @@ def train(model, lr, lamb, train_data, zero_train_data, train, valid_data, test_
 
     # print_acc(valid_accuracies, num_epoch)
     return valid_accuracies, test_acc
-    #####################################################################
-    # END OF YOUR CODE #
-    #####################################################################
+
 
 def print_acc(valid_accuracies, num_epoch):
     indicies = list(range(1, num_epoch+1))
@@ -191,10 +182,7 @@ def main():
     else:
         device = torch.device("cpu")
         zero_train_matrix, train_matrix, train_data, valid_data, test_data = load_data()
-    #####################################################################
-    # Try out 5 different k and select the best k using the #
-    # validation set. #
-    #####################################################################
+
     # Set model hyperparameters.
     start_time = time.time()
     k = 100
@@ -216,9 +204,6 @@ def main():
     print(f"Training time: {training_time} seconds")
 
     return training_time, acc, test_acc, num_epoch
-    #####################################################################
-    # END OF YOUR CODE #
-    #####################################################################
 
 
 if __name__ == "__main__":
