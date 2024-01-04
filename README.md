@@ -22,7 +22,7 @@ This section discusses the enhancement of the algorithm with a deep neural netwo
 - **Utilizing CUDA for Training Optimization:** Leveraging GPU's parallel computing capabilities, the CUDA model is employed to manage the increased computational demands of this more complex model.
 
 
-## Limitations
+### Limitations
 - **Small Sample Size:** The model's complexity increases the risk of overfitting due to a limited data sample.
 - **Overfitting Mitigation:** Strategies include sampling more data, employing bagging techniques, and using a L2 regularizer.
 - **Hyper-Parameter Sensitivity:** Numerous parameters (alpha, k, learning rate, num epoch, lambda) require careful tuning to avoid sub-optimal solutions.
