@@ -29,5 +29,5 @@ This section discusses the enhancement of the algorithm with a deep neural netwo
 - **Vulnerability to Adversarial Attacks:** The deep neural network's sensitivity to data changes makes it prone to such attacks. Regularizing gradients and introducing randomness in training can help mitigate this.
 
 ### Comaprison figure with model and updated model
-! (https://github.com/rethegreat/Correctness-Predictor/blob/main/src/img/model_comparison.png)
+![Comaprison figure](https://github.com/rethegreat/Correctness-Predictor/blob/main/src/img/model_comparison.png)
 
