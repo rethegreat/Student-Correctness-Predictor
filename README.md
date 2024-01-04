@@ -1,6 +1,8 @@
 # Correctness-Predictor
 A series of different machine learning model attempting to model if a student can correctly answer a diagnostic question based on their previous response. 
 
+*Built by [Ivan Ye](https://github.com/ivanfye) and [Boaz Cheung](https://github.com/rethegreat)*
+
 ## Contents
 - **k-Nearest Neighbor (kNN):** Analysis of kNN, comparing 'impute by user' and 'impute by item'. Includes accuracy data and discussion on assumptions and limitations.
 
