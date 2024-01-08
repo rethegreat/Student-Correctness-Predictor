@@ -32,7 +32,7 @@ IRT assigns each student an ability value, θ<sub>i</sub> for each student i, an
 The shape of the curve is in the form of the sigmoid function, as that is the probability of a student answering correctly, offset by the randomly chosen weights for θ and β. These cruves represent the predicted probability that a student i with ability θ<sub>i</sub> can answer questions j<sub>1</sub>, j<sub>2</sub>, j<sub>3</sub> correctly.
 
 ### 
-|[Sigmoid](https://github.com/rethegreat/Correctness-Predictor/blob/main/src/img/j_sigmoid.png)
+![Sigmoid](https://github.com/rethegreat/Correctness-Predictor/blob/main/src/img/j_sigmoid.png)
 
 ## Ensemble
 The ensemble process that was implemented was done through first creating 3 datasets from the given train data, each the same size as the original with replacement. The base model used was IRT, so there were 3 IRT models, each one trained on one of the bootstrapped training sets. Each IRT model then outputs its own θ and β which were each used to predict the correctness, using the given evaluate function, the average of which was taken.
