@@ -31,7 +31,7 @@ IRT assigns each student an ability value, θ<sub>i</sub> for each student i, an
 
 The shape of the curve is in the form of the sigmoid function, as that is the probability of a student answering correctly, offset by the randomly chosen weights for θ and β. These cruves represent the predicted probability that a student i with ability θ<sub>i</sub> can answer questions j<sub>1</sub>, j<sub>2</sub>, j<sub>3</sub> correctly.
 
-### 
+### Student correctness figure 
 ![Sigmoid](https://github.com/rethegreat/Correctness-Predictor/blob/main/src/img/j_sigmoid.png)
 
 ## Ensemble
