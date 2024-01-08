@@ -14,8 +14,24 @@ A series of different machine learning model attempting to model if a student ca
 
 - **Extensions and Modifications of the Neural Network:** Improvements using deep neural networks, Leaky ReLU activation, and Adam optimizer. Discusses limitations like sample size and hyperparameter sensitivity.
 
+# Models
+This section provides an examination of various machine learning models, such as k-Nearest Neighbor, Item Response Theory, Neural Networks, and Ensemble Techniques.
 
-## Extensions and Modifications of the neural network
+## k-Nearest Neighbour
+kNN performs collaborative filtering using the other students' answers to predict whether the specific student can correctly answer some diagnostic questions. Both user-based and item-based collaborative filtering was used.
+- **User-based assumption:** if student X has the same answers on other diagnositc questions as student Y, student X's correctness on specific diagnostic questions matches that of student Y.
+
+- **Item-based assumption:** if question A is answered similarly by other sutdents as question B, question A's difficulty for specific students matches that of question B.
+
+![knn](https://github.com/rethegreat/Correctness-Predictor/blob/main/src/img/knn_acc.png)
+
+## Item Response Theory
+IRT assigns each student an ability value, θ<sub>i</sub> for each student i, and each question a difficulty value, β<sub>j</sub> for each student j, to formulate a probability distribution.
+
+## Ensemble
+The ensemble process that was implemented was done through first creating 3 datasets from the given train data, each the same size as the original with replacement. The base model used was IRT, so there were 3 IRT models, each one trained on one of the bootstrapped training sets. Each IRT model then outputs its own θ and β which were each used to predict the correctness, using the given evaluate function, the average of which was taken.
+
+# Extensions and Modifications of the neural network
 This section discusses the enhancement of the algorithm with a deep neural network, addressing potential underfitting in earlier models. Key points include:
 - **Deep Neural Network Implementation:** To better capture complex data relationships, hidden layers are added with Leaky ReLU activation functions.
 - **Adaptive Moment Estimation (Adam) Optimizer:** Used for a robust approach with an adaptive learning rate and momentum, aiding in handling noisy gradients.
@@ -28,6 +44,6 @@ This section discusses the enhancement of the algorithm with a deep neural netwo
 - **Hyper-Parameter Sensitivity:** Numerous parameters (alpha, k, learning rate, num epoch, lambda) require careful tuning to avoid sub-optimal solutions.
 - **Vulnerability to Adversarial Attacks:** The deep neural network's sensitivity to data changes makes it prone to such attacks. Regularizing gradients and introducing randomness in training can help mitigate this.
 
-### Comaprison figure with model and updated model
-![Comaprison figure](https://github.com/rethegreat/Correctness-Predictor/blob/main/src/img/model_comparison.png)
+### Comparison figure with model and updated model
+![Comparison figure](https://github.com/rethegreat/Correctness-Predictor/blob/main/src/img/model_comparison.png)
 
