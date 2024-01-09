@@ -34,8 +34,14 @@ The shape of the curve is in the form of the sigmoid function, as that is the pr
 ### Student correctness figure 
 ![Sigmoid](https://github.com/rethegreat/Correctness-Predictor/blob/main/src/img/j_sigmoid.png)
 
+## Neural Network
+A neural network model utilizing an AutoEncoder architecture, designed for binary classification of student responses. It comprises two main linear layers for encoding and decoding, with sigmoid activation functions indicating binary classification.
+
+The model is trained using Stochastic Gradient Descent (SGD) with a regularized objective function to prevent overfitting. It is evaluated on both validation and test datasets, focusing on accuracy metrics.
+
 ## Ensemble
 The ensemble process that was implemented was done through first creating 3 datasets from the given train data, each the same size as the original with replacement. The base model used was IRT, so there were 3 IRT models, each one trained on one of the bootstrapped training sets. Each IRT model then outputs its own θ and β which were each used to predict the correctness, using the given evaluate function, the average of which was taken.
+
 
 # Extensions and Modifications of the neural network
 This section discusses the enhancement of the algorithm with a deep neural network, addressing potential underfitting in earlier models. Key points include:
